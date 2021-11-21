@@ -8,24 +8,23 @@
 }
 
 body{
-    background-color: #E9ECEF;
+    background-color: #F5F3F4;
 }
 
-
-nav{
+/* Navbar css */
+.navbar{
     display: flex;
     justify-content: space-around;
     background: #293241;
     align-items: center;
-    min-height: 8vh;
+    height: 8vh;
+    position: sticky;
 }
 
 .logo{
-    color: rgb(229, 227, 245);
-    margin-right: 60%;
-    font-family: sans-serif;
+    color: #ffffff;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .links {
@@ -43,4 +42,98 @@ nav{
 .links li{
     text-decoration: none;
     list-style: none;
+}
+ /* buttons */
+.burger-menu{
+    color: white;
+}
+
+/* Content CSS */
+ 
+.content-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.content-card{
+    background-color: #FFFFFF;
+    height: 70vh;
+    width: 50vh;
+    margin: 1rem 1rem 0px 1rem;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+/* media queries */
+
+@media screen and (max-width:480px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .logo{
+        font-size: 0.8rem;
+        margin-right: 50vw;
+    }
+
+    .links{
+        display: flex;
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        height: 92vh;
+        background-color: #293241;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        left: -100%;
+    }
+}
+
+
+@media screen and (min-width:480px) and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .logo{
+        font-size: 0.8rem;
+        margin-right: 50vw;
+    }
+
+    .links{
+        display: flex;
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        height: 92vh;
+        background-color: #293241;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        left: -100%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .logo{
+        font-size: 0.8rem;
+    }
+    .links a{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1200px) and (min-width:768px) {
+    .logo{
+        font-size: 0.8rem;
+    }
+    .links a{
+        font-size: 0.8rem;
+    }
+    .links{
+        width: 50vh;
+    }
 }
