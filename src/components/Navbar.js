@@ -1,6 +1,19 @@
-import React from 'react'
+import React , {useState} from 'react'
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const menuToggle = () => {
+      const link = document.querySelector('.links')
+      link.classList.toggle('active');
+      console.log('dd')
+    };
+    
+    const menuHandle = () =>{
+      setMenuOpen((menuOpen)=>!menuOpen)
+    }
     return (
       <>
         <nav className="navbar">
@@ -14,13 +27,14 @@ const Navbar = () => {
             <li>
               <a href="/">About</a>
             </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
           </ul>
-          <button className="burger-menu">
-            
-          </button>
+          <div className="menu-icon" onClick={menuToggle}>
+            {!menuOpen ? (
+              <FaBars onClick={menuHandle} />
+            ) : (
+              <FaTimes onClick={menuHandle} />
+            )}
+          </div>
         </nav>
       </>
     );
