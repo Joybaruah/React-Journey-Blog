@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Montserrat&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,10 +16,10 @@ body {
 .navbar {
   display: flex;
   justify-content: space-around;
-  background: #293241;
+  background: #323c4e;
   align-items: center;
   height: 8vh;
-  position: sticky;
+  position: -webkit-sticky;
 }
 
 .logo {
@@ -63,23 +64,31 @@ body {
 
 /* Content CSS */
 
+.code-with-harry{
+  text-decoration: none;
+  color: #000000;
+}
+
 .content-body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .content-card {
-  background-color: #ffffff;
-  height: 70vh;
-  width: 50vh;
+  height: 500px;
+  width: 400px;
   margin: 1rem 1rem 0px 1rem;
   border-radius: 4px;
   padding: 1em;
 }
 
-/* media queries */
+.content-card p {
+  margin-top: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* media queries start */
 
 @media screen and (max-width: 480px) {
   body {
@@ -88,46 +97,12 @@ body {
 
   .logo {
     font-size: 0.8rem;
-    margin-right: 50vw;
-  }
-
-  .links a {
-    padding: 1rem;
-  }
-
-  .links {
-    display: flex;
-    position: absolute;
-    right: 0px;
-    top: 8vh;
-    height: 30vh;
-    background-color: #293241;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    right: -100%;
-  }
-  .active {
-    right: 0%;
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
-  .menu-icon {
-    display: block;
-    color: #ffffff;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    
-  .logo {
-    font-size: 0.8rem;
-    margin-right: 50vw;
+    margin-right: 40vw;
   }
 
   .links a:hover {
     border-radius: 1px;
-    padding: 1.5rem 12vh;
+    padding: 1.5rem 100vh;
   }
 
   .links {
@@ -140,7 +115,42 @@ body {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
+    left: -100%;
+  }
+  .active {
+    left: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .menu-icon {
+    display: block;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .logo {
+    font-size: 0.8rem;
+    margin-right: 50vw;
+  }
+
+  .links a:hover {
+    border-radius: 1px;
+    padding: 1.5rem 100vh;
+  }
+
+  .links {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 8vh;
+    height: 30vh;
+    background-color: #293241;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
     left: -100%;
   }
   .active {

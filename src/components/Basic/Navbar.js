@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -22,10 +23,10 @@ const Navbar = () => {
           </div>
           <ul className="links">
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
           <div className="menu-icon" onClick={menuToggle}>
